@@ -9,7 +9,7 @@
     <p id="message">Loading...</p>
 
     <script>
-        fetch("https://YOUR-BACKEND-URL.onrender.com/api/hello")
+        fetch("https://fastapi-backend-y6pr.onrender.com/api/hello")
             .then(res => res.json())
             .then(data => {
                 document.getElementById("message").textContent = data.message;
