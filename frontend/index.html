@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI + HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hello from Frontend</h1>
+    <p id="message">Loading...</p>
+
+    <script>
+        fetch("https://YOUR-BACKEND-URL.onrender.com/api/hello")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("message").textContent = data.message;
+            })
+            .catch(err => {
+                document.getElementById("message").textContent = "Error fetching data";
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
